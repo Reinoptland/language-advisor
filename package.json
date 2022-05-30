@@ -12,6 +12,7 @@
   "author": "Rein Op 't Land",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "readline-sync": "^1.4.10"
   }
 }

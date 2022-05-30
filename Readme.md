@@ -16,7 +16,12 @@ Wat is de "package.json"?
 
 - [x] setup package.json & git
 - [x] try readline-sync!
-- [ ] ?? Ik zou zeggen: Je hebt committen en pushen (niet hetzelfde!)
+- [x] Commit
+- [ ] Send email! (using package)
+  - [x] Get api key
+  - [x] Add to env and to .gitignore (why?)
+  - [ ] Try readme example (reverify sendgrid first)
+- [ ] Implement flowchart
 
 Hoe kan ik readline sync makkelijk uitproberen?
 Het voorbeeld uit de readme proberen
