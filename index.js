@@ -1,19 +1,5 @@
 require("dotenv").config();
-
 const readlineSync = require("readline-sync");
-// deze input hebben we nodig als onderdeel van die vraag
-// Dit moeten we meegeven aan de functie als input (argument en parameter)
-const goals = ["Games", "Websites and Apps", "Working with Databases and Math"];
-// dit is processing (en een beetje input uit de terminal):
-// hier beginnen we te vragen: wat wil je doen?
-// const index = readlineSync.keyInSelect(
-//   goals,
-//   "What kind of thing do you want to program?"
-// );
-
-// hier hebben we het antwoord
-// dit wordt de return value! (want hier hebben we het antwoord!)
-// const userGoal = goals[index];
 
 function getProgrammingGoal(goalOptions) {
   console.log("CHECK input:", goalOptions); // what will this be?
@@ -27,11 +13,7 @@ function getProgrammingGoal(goalOptions) {
   return userGoal;
 }
 
-// console.log(
-//   getProgrammingGoal(goals),
-//   "SHOULD BE: games, websites and apps or working with dbs and math"
-// );
-
+const goals = ["Games", "Websites and Apps", "Working with Databases and Math"];
 const userGoal = getProgrammingGoal(goals);
 
 let language;
