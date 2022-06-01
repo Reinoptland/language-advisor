@@ -16,18 +16,29 @@ function getProgrammingGoal(goalOptions) {
 const goals = ["Games", "Websites and Apps", "Working with Databases and Math"];
 const userGoal = getProgrammingGoal(goals);
 
-let language;
+// hier willen we een language weten
+// let language;
 
-if (userGoal === "Games") {
-  language = "C++ / C#";
-} else if (userGoal === "Websites and Apps") {
-  language = "HTML / CSS / JavaScript";
-} else if (userGoal === "Working with Databases and Math") {
-  language = "SQL & Python";
-} else {
-  console.log("OK! Bye!");
-  process.exit();
+function generateLanguageAdvice(chosenGoal) {
+  console.log("INPUT CHECK:", chosenGoal);
+  // userGoal is nodig als input (argument en parameter dus)
+  if (chosenGoal === "Games") {
+    // hier hebben we een resultaat (een return value!)
+    return "C++ / C#";
+  } else if (chosenGoal === "Websites and Apps") {
+    // hier hebben we een resultaat (een return value!)
+    return "HTML / CSS / JavaScript";
+  } else if (chosenGoal === "Working with Databases and Math") {
+    // hier hebben we een resultaat (een return value!)
+    return "SQL & Python";
+  } else {
+    console.log("OK! Bye!");
+    process.exit();
+  }
 }
+
+const language = generateLanguageAdvice(userGoal);
+console.log("CHECK?", language);
 
 let hours;
 
