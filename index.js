@@ -12,24 +12,12 @@ function getProgrammingGoal(goalOptions) {
   const userGoal = goalOptions[index];
   return userGoal;
 }
-
-const goals = ["Games", "Websites and Apps", "Working with Databases and Math"];
-const userGoal = getProgrammingGoal(goals);
-
-// hier willen we een language weten
-// let language;
-
 function generateLanguageAdvice(chosenGoal) {
-  console.log("INPUT CHECK:", chosenGoal);
-  // userGoal is nodig als input (argument en parameter dus)
   if (chosenGoal === "Games") {
-    // hier hebben we een resultaat (een return value!)
     return "C++ / C#";
   } else if (chosenGoal === "Websites and Apps") {
-    // hier hebben we een resultaat (een return value!)
     return "HTML / CSS / JavaScript";
   } else if (chosenGoal === "Working with Databases and Math") {
-    // hier hebben we een resultaat (een return value!)
     return "SQL & Python";
   } else {
     console.log("OK! Bye!");
@@ -37,18 +25,20 @@ function generateLanguageAdvice(chosenGoal) {
   }
 }
 
-const language = generateLanguageAdvice(userGoal);
-console.log("CHECK?", language);
-
-let hours;
-
-if (language === "C++ / C#") {
-  hours = 2000;
-} else if (language === "HTML / CSS / JavaScript") {
-  hours = 1000;
-} else {
-  hours = 1500;
+function determinHours(language) {
+  if (language === "C++ / C#") {
+    return 2000;
+  } else if (language === "HTML / CSS / JavaScript") {
+    return 1000;
+  } else {
+    return 1500;
+  }
 }
+// hier zie je nu de flow onstaan die je in 1 oogopslag kan lezen
+const goals = ["Games", "Websites and Apps", "Working with Databases and Math"];
+const userGoal = getProgrammingGoal(goals);
+const language = generateLanguageAdvice(userGoal);
+const hours = determinHours(language);
 
 const hoursPerWeek = readlineSync.questionInt(
   "How many hours can you study each week? "
